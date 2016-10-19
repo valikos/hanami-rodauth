@@ -1,13 +1,13 @@
 require 'hanami'
 require 'hanami/auth'
+require 'hanami/cli'
 require 'hanami/commands/auth'
 require 'hanami/rodauth/version'
-require 'hanami/cli_sub_commands/generate'
 
 module Hanami
 end
 
-Hanami::CliSubCommands::Generate.add_cli_commands do
+Hanami::Cli.define_commands do
   desc 'auth', 'Generate an auth app'
   long_desc <<-EOS
   EOS
